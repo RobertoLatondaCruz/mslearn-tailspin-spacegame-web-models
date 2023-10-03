@@ -36,12 +36,11 @@ steps:
     patchVersion: '0'
  
 - task: NuGetCommand@2
-  displayName: 'Publish NuGet package'
+  displayName: 'Restore project dependencies'
   inputs:
-    command: push
-    packagesToPush: '*.nupkg'
-    feedPublish: '$(System.TeamProject)/Tailspin.SpaceGame.Web.Models'
-    allowPackageConflicts: true
-  condition: succeeded()
+    command: 'restore'
+    restoreSolution: '**/*.sln'
+    feedsToUse: 'select'
+    vstsFeed: '$(System.TeamProject)/Tailspin.SpaceGame.Web.Models'
 
 
