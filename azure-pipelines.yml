@@ -41,6 +41,6 @@ steps:
     command: 'restore'
     restoreSolution: '**/*.sln'
     feedsToUse: 'select'
-    vstsFeed: '$(System.TeamProject)/Tailspin.SpaceGame.Web.Models'
+    vstsFeed: '$(System.TeamProject)/Tailspin.SpaceGame.Web.Models1'
 
 
